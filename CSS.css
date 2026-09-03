@@ -1,0 +1,377 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee9df;
+    color: #29251f;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #211d18;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d5ad57;
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+main > section:first-child {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background-color: #d9cfbd;
+}
+
+main > section:first-child h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #30281f;
+}
+
+main > section:first-child p {
+    max-width: 650px;
+    font-size: 19px;
+}
+
+
+/* =========================
+   SEÇÕES DOS QUARTOS
+========================= */
+
+main > section:not(:first-child) {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 45px;
+
+    background-color: #faf8f3;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+main > section:not(:first-child):hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+main > section h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+main > section h3 {
+    font-size: 23px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   IMAGENS
+========================= */
+
+main > section img {
+    display: block;
+
+    width: 85%;
+    max-width: 800px;
+    height: 450px;
+
+    object-fit: cover;
+
+    margin: 25px auto;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition: 0.4s;
+}
+
+main > section img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   PARÁGRAFOS
+========================= */
+
+main > section p {
+    max-width: 850px;
+    margin: 0 auto 20px auto;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   LISTAS
+========================= */
+
+ul {
+    max-width: 850px;
+    margin: 0 auto 20px auto;
+
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   ZEUS
+========================= */
+
+#zeus {
+    border-top: 10px solid #4169a1;
+}
+
+#zeus h2 {
+    color: #315486;
+}
+
+#zeus h3 {
+    color: #98752d;
+}
+
+
+/* =========================
+   POSEIDON
+========================= */
+
+#poseidon {
+    border-top: 10px solid #168aad;
+}
+
+#poseidon h2 {
+    color: #08718d;
+}
+
+#poseidon h3 {
+    color: #08718d;
+}
+
+
+/* =========================
+   ATHENA
+========================= */
+
+#athena {
+    border-top: 10px solid #a98248;
+}
+
+#athena h2 {
+    color: #765725;
+}
+
+#athena h3 {
+    color: #8d692f;
+}
+
+
+/* =========================
+   ARES
+========================= */
+
+#ares {
+    border-top: 10px solid #9e2929;
+}
+
+#ares h2 {
+    color: #851e1e;
+}
+
+#ares h3 {
+    color: #8c2424;
+}
+
+
+/* =========================
+   HADES
+========================= */
+
+#hades {
+    border-top: 10px solid #4b326b;
+}
+
+#hades h2 {
+    color: #43275f;
+}
+
+#hades h3 {
+    color: #593b78;
+}
+
+
+/* =========================
+   APOLLO
+========================= */
+
+#apollo {
+    border-top: 10px solid #d49a24;
+}
+
+#apollo h2 {
+    color: #ad750d;
+}
+
+#apollo h3 {
+    color: #b57c12;
+}
+
+
+/* =========================
+   ARTEMIS
+========================= */
+
+#artemis {
+    border-top: 10px solid #526b53;
+}
+
+#artemis h2 {
+    color: #405841;
+}
+
+#artemis h3 {
+    color: #526b53;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #211d18;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 80px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main > section:first-child {
+        min-height: 350px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 30px;
+    }
+
+    main > section:not(:first-child) {
+        margin: 35px 15px;
+        padding: 25px 20px;
+    }
+
+    main > section h2 {
+        font-size: 30px;
+    }
+
+    main > section img {
+        width: 100%;
+        height: 280px;
+    }
+
+    main > section p {
+        font-size: 16px;
+    }
+
+}
