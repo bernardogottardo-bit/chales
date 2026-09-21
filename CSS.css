@@ -2,6 +2,15 @@
    CONFIGURAÇÕES GERAIS
 ========================= */
 
+:root {
+    --fundo: #eee9df;
+    --escuro: #211d18;
+    --texto: #29251f;
+    --branco: #faf8f3;
+    --dourado: #d5ad57;
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +19,13 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 130px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #eee9df;
-    color: #29251f;
+    background-color: var(--fundo);
+    color: var(--texto);
     line-height: 1.6;
 }
 
@@ -25,19 +35,19 @@ body {
 ========================= */
 
 header {
-    background-color: #211d18;
+    background: var(--escuro);
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
     font-size: 34px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     letter-spacing: 1px;
 }
 
@@ -50,20 +60,26 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
+
+    padding: 8px 14px;
+    border-radius: 20px;
+
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #d5ad57;
+    background-color: var(--dourado);
+    color: var(--escuro);
+    transform: translateY(-2px);
 }
 
 
@@ -72,50 +88,66 @@ nav a:hover {
 ========================= */
 
 main > section:first-child {
-    min-height: 400px;
+    min-height: 450px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
 
     padding: 60px 20px;
 
-    background-color: #d9cfbd;
+    background:
+        linear-gradient(
+            rgba(217, 207, 189, 0.85),
+            rgba(217, 207, 189, 0.85)
+        );
+
+    border-bottom: 1px solid #d0c5b1;
 }
 
 main > section:first-child h2 {
-    font-size: 42px;
+    max-width: 800px;
+
+    font-size: 44px;
+    line-height: 1.2;
+
     margin-bottom: 20px;
+
     color: #30281f;
 }
 
 main > section:first-child p {
     max-width: 650px;
     font-size: 19px;
+    color: #51483c;
 }
 
 
 /* =========================
-   SEÇÕES DOS QUARTOS
+   SEÇÕES DOS DEUSES
 ========================= */
 
 main > section:not(:first-child) {
     max-width: 1100px;
+
     margin: 70px auto;
     padding: 45px;
 
-    background-color: #faf8f3;
+    background-color: var(--branco);
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--sombra);
 
     transition: 0.3s;
 }
 
 main > section:not(:first-child):hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
 }
 
 
@@ -125,14 +157,18 @@ main > section:not(:first-child):hover {
 
 main > section h2 {
     text-align: center;
+
     font-size: 38px;
+
     margin-bottom: 25px;
 }
 
 main > section h3 {
-    font-size: 23px;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    max-width: 850px;
+
+    margin: 28px auto 10px;
+
+    font-size: 22px;
 }
 
 
@@ -151,9 +187,9 @@ main > section img {
 
     margin: 25px auto;
 
-    border-radius: 15px;
+    border-radius: 18px;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
 
     transition: 0.4s;
 }
@@ -164,12 +200,13 @@ main > section img:hover {
 
 
 /* =========================
-   PARÁGRAFOS
+   TEXTOS
 ========================= */
 
 main > section p {
     max-width: 850px;
-    margin: 0 auto 20px auto;
+
+    margin: 0 auto 20px;
 
     font-size: 17px;
 }
@@ -179,24 +216,27 @@ main > section p {
    LISTAS
 ========================= */
 
-ul {
+main > section ul {
     max-width: 850px;
-    margin: 0 auto 20px auto;
+
+    margin: 0 auto 20px;
 
     padding-left: 25px;
 }
 
-li {
+main > section li {
     margin-bottom: 8px;
 }
 
 
 /* =========================
-   ZEUS
+   CORES DOS DEUSES
 ========================= */
 
+/* Zeus */
+
 #zeus {
-    border-top: 10px solid #4169a1;
+    border-top: 8px solid #4169a1;
 }
 
 #zeus h2 {
@@ -208,29 +248,22 @@ li {
 }
 
 
-/* =========================
-   POSEIDON
-========================= */
+/* Poseidon */
 
 #poseidon {
-    border-top: 10px solid #168aad;
+    border-top: 8px solid #168aad;
 }
 
-#poseidon h2 {
-    color: #08718d;
-}
-
+#poseidon h2,
 #poseidon h3 {
     color: #08718d;
 }
 
 
-/* =========================
-   ATHENA
-========================= */
+/* Athena */
 
 #athena {
-    border-top: 10px solid #a98248;
+    border-top: 8px solid #a98248;
 }
 
 #athena h2 {
@@ -242,29 +275,22 @@ li {
 }
 
 
-/* =========================
-   ARES
-========================= */
+/* Ares */
 
 #ares {
-    border-top: 10px solid #9e2929;
+    border-top: 8px solid #9e2929;
 }
 
-#ares h2 {
+#ares h2,
+#ares h3 {
     color: #851e1e;
 }
 
-#ares h3 {
-    color: #8c2424;
-}
 
-
-/* =========================
-   HADES
-========================= */
+/* Hades */
 
 #hades {
-    border-top: 10px solid #4b326b;
+    border-top: 8px solid #4b326b;
 }
 
 #hades h2 {
@@ -276,29 +302,22 @@ li {
 }
 
 
-/* =========================
-   APOLLO
-========================= */
+/* Apollo */
 
 #apollo {
-    border-top: 10px solid #d49a24;
+    border-top: 8px solid #d49a24;
 }
 
-#apollo h2 {
+#apollo h2,
+#apollo h3 {
     color: #ad750d;
 }
 
-#apollo h3 {
-    color: #b57c12;
-}
 
-
-/* =========================
-   ARTEMIS
-========================= */
+/* Artemis */
 
 #artemis {
-    border-top: 10px solid #526b53;
+    border-top: 8px solid #526b53;
 }
 
 #artemis h2 {
@@ -315,7 +334,8 @@ li {
 ========================= */
 
 footer {
-    background-color: #211d18;
+    background-color: var(--escuro);
+
     color: white;
 
     text-align: center;
@@ -336,38 +356,55 @@ footer p {
 
 @media (max-width: 700px) {
 
+    header {
+        padding: 20px 15px;
+    }
+
     header h1 {
         font-size: 25px;
+        margin-bottom: 15px;
     }
 
     nav {
-        gap: 12px;
+        gap: 5px;
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 13px;
+        padding: 6px 9px;
     }
 
     main > section:first-child {
         min-height: 350px;
+        padding: 40px 20px;
     }
 
     main > section:first-child h2 {
         font-size: 30px;
     }
 
+    main > section:first-child p {
+        font-size: 16px;
+    }
+
     main > section:not(:first-child) {
         margin: 35px 15px;
         padding: 25px 20px;
+        border-radius: 15px;
     }
 
     main > section h2 {
         font-size: 30px;
     }
 
+    main > section h3 {
+        font-size: 20px;
+    }
+
     main > section img {
         width: 100%;
         height: 280px;
+        border-radius: 12px;
     }
 
     main > section p {
